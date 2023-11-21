@@ -1,9 +1,5 @@
-<p>
-    <input type="number" [value]="duration()" (change)="changeDuration($event)">
-</p>
-<p>
-    <input type="text" [value]="message()" (change)="changeMessage($event)">
-</p>
-<p>
-    <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0" />
-</p>
+<div class="px-10">
+    <h1 class="text-lg font-bold">About</h1>
+    <p class="text-sm">eCommerce significa comercio electrónico y se refiere a todas las transacciones realizadas electrónicamente. Esto incluye varias herramientas y actividades en línea, desde la banca por Internet y las billeteras electrónicas hasta la venta de boletos y subastas en línea.</p>
+    <p class="text-sm">Número de clientes: <app-counter [duration]="duration()" [message]="message()" *ngIf="duration() > 0" /></p>
+</div>
