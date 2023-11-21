@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,6 +8,9 @@ import { CommonModule } from '@angular/common';
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
+
 export class ProductComponent {
-  img = 'https://picsum.photos/640/640?r=' + Math.random()
+  @Input({ required: true }) img: string = '';
+  @Input({ required: true }) price: number = 0;
+  @Input({ required: true }) title: string = '';
 }
