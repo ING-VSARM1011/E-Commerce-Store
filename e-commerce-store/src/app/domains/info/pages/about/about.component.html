@@ -16,8 +16,10 @@
                 consumer-to-consumer,
                 payment services.
             </p>
-            <p class="text-sm pt-3">Number of customers: <app-counter [duration]="duration()" [message]="message()"
-                    *ngIf="duration() > 0" /></p>
+            <p class="text-sm pt-3">Number of customers: @if (duration() > 0) {
+                <app-counter [duration]="duration()" [message]="message()" />
+                }
+            </p>
         </div>
     </div>
 </div>
